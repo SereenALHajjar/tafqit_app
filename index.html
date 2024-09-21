@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tafqit Number Conversion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <!-- <img src="logo.png" alt="تفقيط Logo" class="logo-img"> -->
+            <h1><a href="index.html">تفقيط</a></h1>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <h1>تحويل الأعداد المكتوبة رقماً إلى أعداد مكتوبة نصاً </h1>
+
+        <div class="form-group">
+            <!-- <label for="numberInput">أدخل العدد:</label> -->
+            <input type="number" id="numberInput" placeholder="أدخل العدد" required>
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label for="feminine">المعدود مؤنث</label>
+                <input type="radio" id="feminine" name="type" value="true">
+                <label for="masculine">المعدود مذكر</label>
+                <input type="radio" id="masculine" name="type" value="false">
+            </div>
+            <div class="option-group">
+                <label for="miah">مئة</label>
+                <input type="radio" id="miah" name="hundred" value="false">
+                <label for="maah">مائة</label>
+                <input type="radio" id="maah" name="hundred" value="true">
+            </div>
+            <div class="option-group">
+                <label for="billion">بليون</label>
+                <input type="radio" id="billion" name="billion" value="true">
+                <label for="miliar">مليار</label>
+                <input type="radio" id="miliar" name="billion" value="false">
+            </div>
+            <div class="option-group">
+                <label for="nom">رفع</label>
+                <input type="radio" id="nom" name="status" value="false">
+                <label for="ag">نصب / جر</label>
+                <input type="radio" id="ag" name="status" value="true">
+            </div>
+        </div>
+
+
+        <button onclick="sendRequest()">Convert</button>
+
+        <div class="output">
+            <p id="resultOutput"></p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
