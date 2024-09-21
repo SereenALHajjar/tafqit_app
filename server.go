@@ -6,6 +6,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/SereenALHajjar/tafqit"
 )
@@ -63,7 +64,11 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/static/", http.StatusMovedPermanently)
 	})
-	
+
 	fmt.Println("Server is running on http://localhost:8099")
-	log.Fatal(http.ListenAndServe(":8099", nil))
+	address := os.Getenv("SERVER_ADDR")
+	if address == "" {
+		address = ":8009"
+	}
+	log.Fatal(http.ListenAndServe(address, nil))
 }
