@@ -76,7 +76,7 @@ function sendRequest() {
         AG: ag
     };
 
-    fetch('http://localhost:8099/', {
+    fetch('http://localhost:8099/tafqit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
