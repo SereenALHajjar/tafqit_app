@@ -10,28 +10,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-        </nav>
-        <div class="logo">
-            <!-- <img src="logo.png" alt="تفقيط Logo" class="logo-img"> -->
-            <h1><a href="index.html">تفقيط</a></h1>
-        </div>
-
-    </header>
+    <div class="header-container">
+        <h1><a href="index.html">  تفقيط</a></h1>
+ 
+                <!-- <h4><a href="about.html">About Me</a></h4> -->
+    </div>
 
     <div class="container">
         <h1>تحويل الأعداد المكتوبة رقماً إلى أعداد مكتوبة نصاً </h1>
 
         <div class="form-group">
-            <!-- <label for="numberInput">أدخل العدد:</label> -->
             <input type="number" id="numberInput" placeholder="أدخل العدد" required>
         </div>
 
@@ -61,13 +56,17 @@
                 <input type="radio" id="ag" name="status" value="true">
             </div>
         </div>
-
-
-        <button onclick="sendRequest()">Convert</button>
+        <div class="buttons">
+            <button type="reset" onclick="resetForm()">مسح</button>
+            <button onclick="sendRequest()">تحويل</button>
+        </div>
+        
 
         <div class="output">
-            <p id="resultOutput"></p>
+            <p id="resultOutput">ستظهر النتيجة هنا</p>
+            <button onclick="copyToClipboard()">نسخ الى الحافظة</button>
         </div>
+        
     </div>
 
 

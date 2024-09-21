@@ -4,6 +4,31 @@ function converter(s) {
         return false
     return true
 }
+function resetForm() {
+    document.getElementById('numberInput').value = '';
+    const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => radio.checked = false);
+    document.getElementById('resultOutput').innerHTML = ''; // Clear the output
+}
+
+function copyToClipboard() {
+    const resultText = document.getElementById('resultOutput').textContent;
+
+    if (resultText) {
+        navigator.clipboard.writeText(resultText)
+            .then(() => {
+                alert('Text copied to clipboard');
+            })
+            .catch(err => {
+                alert('Failed to copy text');
+                console.error('Error copying text: ', err);
+            });
+    } else {
+        alert('No text to copy');
+    }
+}
+
+
 function sendRequest() {
     const num = document.getElementById('numberInput').value;
 
@@ -34,7 +59,10 @@ function sendRequest() {
 
     // Add your logic to send the request with these values
 
-
+    if (num.length > 18) {
+        document.getElementById('resultOutput').innerText = " هذا العدد كبير جدا";
+        return;
+    }
     if (num === "") {
         alert("Please enter a number");
         return;
