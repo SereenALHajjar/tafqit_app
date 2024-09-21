@@ -1,25 +1,30 @@
 
-function converter(s) {
+function converter(s)
+{
     if (s == "false")
         return false
     return true
 }
-function resetForm() {
+function resetForm()
+{
     document.getElementById('numberInput').value = '';
     const radios = document.querySelectorAll('input[type="radio"]');
     radios.forEach(radio => radio.checked = false);
     document.getElementById('resultOutput').innerHTML = ''; // Clear the output
 }
 
-function copyToClipboard() {
+function copyToClipboard()
+{
     const resultText = document.getElementById('resultOutput').textContent;
 
     if (resultText) {
         navigator.clipboard.writeText(resultText)
-            .then(() => {
+            .then(() =>
+            {
                 alert('Text copied to clipboard');
             })
-            .catch(err => {
+            .catch(err =>
+            {
                 alert('Failed to copy text');
                 console.error('Error copying text: ', err);
             });
@@ -29,7 +34,8 @@ function copyToClipboard() {
 }
 
 
-function sendRequest() {
+function sendRequest()
+{
     const num = document.getElementById('numberInput').value;
 
     // Get the checked value for feminine/masculine
@@ -76,7 +82,10 @@ function sendRequest() {
         AG: ag
     };
 
-    fetch('http://localhost:8099/tafqit', {
+    // Get the base URL dynamically
+    const baseUrl = window.location.origin;
+
+    fetch(`${baseUrl}/tafqit`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -84,10 +93,12 @@ function sendRequest() {
         body: JSON.stringify(requestBody)
     })
         .then(response => response.text())
-        .then(data => {
+        .then(data =>
+        {
             document.getElementById('resultOutput').innerText = `${data}`;
         })
-        .catch(error => {
+        .catch(error =>
+        {
             console.error('Error:', error);
         });
 }
