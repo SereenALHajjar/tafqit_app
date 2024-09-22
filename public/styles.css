@@ -130,7 +130,7 @@ a:visited {
     padding: 20px; 
 }
 
-.header-container h1, .header-container h4 {
+.header-container h1 {
     margin: 0; 
     font-family: "Aref Ruqaa", sans-serif; 
     color: #ffffff; /* Set the text color */
@@ -138,23 +138,44 @@ a:visited {
     font-style: normal;
 }
 
-/* Style for the <a> tags */
 .header-container a {
-    text-decoration: none; /* Removes underline */
-    color: #ffffff; /* Sets a custom link color (blue) */
+    text-decoration: none;
+    color: #ffffff; 
 }
 
-/* Style for the <a> tags when hovered */
 .header-container a:hover {
-    color: #ffffff; /* Changes color when hovering */
+    color: #ffffff;
 }
 
-/* Optional: style for the h1 link */
-.header-container h1 a {
-    font-size:3.0rem; /* Makes the main title larger */
+.header-container h1{
+    font-size:3.0rem; 
 }
 
-/* Optional: style for the h4 link */
-.header-container h4 a {
-    font-size: 1.0rem; /* Smaller size for the "About Me" */
+.social-icons {
+    margin-top:20% ;
+    position: fixed;
+}
+.social-icons a {
+    display:flex;
+    flex-direction: left;
+    justify-content: left;
+    /* align-items:first baseline; */
+    font-size: 2rem;
+    padding: 0.7rem;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    margin: 1.5rem 1.5rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.big-container {
+    display: flex;
+    flex-direction: row;
 }

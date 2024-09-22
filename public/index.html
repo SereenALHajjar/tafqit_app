@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tafqit Number Conversion</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
@@ -23,50 +24,64 @@
                 <!-- <h4><a href="about.html">About Me</a></h4> -->
     </div>
 
-    <div class="container">
-        <h1>تحويل الأعداد المكتوبة رقماً إلى أعداد مكتوبة نصاً </h1>
+    <div class="big-container">
 
-        <div class="form-group">
-            <input type="number" id="numberInput" placeholder="أدخل العدد" required>
+        <div class="social-icons">
+            <a href="https://github.com/SereenALHajjar">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sereen-ِalhajjar-5526bb214" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:alhajjar.sereen@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
         </div>
-
-        <div class="options">
-            <div class="option-group">
-                <label for="feminine">المعدود مؤنث</label>
-                <input type="radio" id="feminine" name="type" value="true">
-                <label for="masculine">المعدود مذكر</label>
-                <input type="radio" id="masculine" name="type" value="false">
+        <div class="container">
+            <h1>تحويل الأعداد المكتوبة رقماً إلى أعداد مكتوبة نصاً </h1>
+    
+            <div class="form-group">
+                <input type="number" id="numberInput" placeholder="أدخل العدد" required>
             </div>
-            <div class="option-group">
-                <label for="miah">مئة</label>
-                <input type="radio" id="miah" name="hundred" value="false">
-                <label for="maah">مائة</label>
-                <input type="radio" id="maah" name="hundred" value="true">
+    
+            <div class="options">
+                <div class="option-group">
+                    <label for="feminine">المعدود مؤنث</label>
+                    <input type="radio" id="feminine" name="type" value="true">
+                    <label for="masculine">المعدود مذكر</label>
+                    <input type="radio" id="masculine" name="type" value="false">
+                </div>
+                <div class="option-group">
+                    <label for="miah">مئة</label>
+                    <input type="radio" id="miah" name="hundred" value="false">
+                    <label for="maah">مائة</label>
+                    <input type="radio" id="maah" name="hundred" value="true">
+                </div>
+                <div class="option-group">
+                    <label for="billion">بليون</label>
+                    <input type="radio" id="billion" name="billion" value="true">
+                    <label for="miliar">مليار</label>
+                    <input type="radio" id="miliar" name="billion" value="false">
+                </div>
+                <div class="option-group">
+                    <label for="nom">رفع</label>
+                    <input type="radio" id="nom" name="status" value="false">
+                    <label for="ag">نصب / جر</label>
+                    <input type="radio" id="ag" name="status" value="true">
+                </div>
             </div>
-            <div class="option-group">
-                <label for="billion">بليون</label>
-                <input type="radio" id="billion" name="billion" value="true">
-                <label for="miliar">مليار</label>
-                <input type="radio" id="miliar" name="billion" value="false">
+            <div class="buttons">
+                <button type="reset" onclick="resetForm()">مسح</button>
+                <button onclick="sendRequest()">تحويل</button>
             </div>
-            <div class="option-group">
-                <label for="nom">رفع</label>
-                <input type="radio" id="nom" name="status" value="false">
-                <label for="ag">نصب / جر</label>
-                <input type="radio" id="ag" name="status" value="true">
+            
+    
+            <div class="output">
+                <p id="resultOutput">ستظهر النتيجة هنا</p>
+                <button onclick="copyToClipboard()">نسخ الى الحافظة</button>
             </div>
+            
         </div>
-        <div class="buttons">
-            <button type="reset" onclick="resetForm()">مسح</button>
-            <button onclick="sendRequest()">تحويل</button>
-        </div>
-        
-
-        <div class="output">
-            <p id="resultOutput">ستظهر النتيجة هنا</p>
-            <button onclick="copyToClipboard()">نسخ الى الحافظة</button>
-        </div>
-        
     </div>
 
 
