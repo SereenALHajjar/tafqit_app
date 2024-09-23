@@ -1,9 +1,19 @@
+:root {
+    --main-color: #695847;
+    --on-hover-color: #44392e;
+    --secondary-color: #C6FFDD;
+    --text-color: white;
+    --secondary-text-color: #888;
+}
+
 body {
     font-family: "Cairo", sans-serif;
-    background: #C6FFDD;  
-    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  
-    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); 
-    color: #888;
+    background-color: rgb(31, 31, 31);
+    background-image: url("background.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+    color: white;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -11,12 +21,11 @@ body {
 }
 
 input::placeholder {
-    color: #888;
+    color: var(--secondary-text-color);
     font-family: 'Cairo', sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
-
 
 h1 {
     font-size: 1.8em;
@@ -29,19 +38,13 @@ h1 {
     margin: 40px auto;
     padding: 30px;
     text-align: right;
-    background: rgba(255, 255, 255, 0.37);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.5px);
-    -webkit-backdrop-filter: blur(1.5px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .container h1 {
-    color: #2e2e2e;
+    color: white;
     font-size: 2em;
     margin-bottom: 25px;
-    border-bottom: 2px solid #f7797d;
+    border-bottom: 2px solid var(--main-color);
     display: inline-block;
     padding-bottom: 10px;
 }
@@ -84,31 +87,29 @@ input[type="number"] {
     margin-right: 5px;
 }
 
-
 button {
     width: 100%;
     padding: 12px 20px;
     font-size: 1.1em;
-    background-color: #f7797d;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--text-color);
     border: none; 
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-weight: bold;
     font-family: 'Cairo', sans-serif;
-    font-size: 15px;
 }
 
 button:hover {
-    background-color: #af575a;
+    background-color: var(--on-hover-color);
 }
 
 .buttons {
     display: flex;
     gap: 10px; 
-
 }
+
 #resultOutput {
     font-size: large;
     text-align: right;
@@ -116,57 +117,41 @@ button:hover {
     font-family: 'Cairo', sans-serif;
     font-size: 20px;
 }
+
 a {
     text-decoration: none;
-    color: white;
-}
-
-a:visited {
-    color: white; 
+    color: var(--text-color);
 }
 
 .header-container {
     text-align: left; 
-    padding: 20px; 
+    padding: 5px; 
+    margin-top: -30;
+    margin-left: 10px;
 }
 
 .header-container h1 {
     margin: 0; 
     font-family: "Aref Ruqaa", sans-serif; 
-    color: #ffffff; /* Set the text color */
-    font-weight:800;
-    font-style: normal;
-}
-
-.header-container a {
-    text-decoration: none;
-    color: #ffffff; 
-}
-
-.header-container a:hover {
-    color: #ffffff;
-}
-
-.header-container h1{
-    font-size:3rem; 
+    color: var(--text-color);
+    font-weight: 800;
+    font-size: 3rem; 
     display: inline-block;
 }
 
 .social-icons {
-    margin-top:25% ;
+    margin-top: 20%;
 }
+
 .social-icons a {
-    display:flex;
-    flex-direction: left;
-    justify-content: left;
-    /* align-items:first baseline; */
+    display: flex;
+    justify-content: center;
     font-size: 2rem;
     padding: 0.7rem;
-    background: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--text-color);
     border-radius: 50%;
-    color: white;
-    margin: 1.5rem 1.5rem;
+    color: var(--text-color);
+    margin: 1.5rem;
     transition: 0.3s ease;
 }
 
@@ -178,11 +163,11 @@ a:visited {
 .big-container {
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
 }
 
 @media (max-width: 768px) {
     .big-container {
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100vh; 
@@ -190,7 +175,6 @@ a:visited {
 
     .social-icons {
         display: flex;
-        flex-direction: row;
         justify-content: center;
         order: 2;
         margin-bottom: 25px;
@@ -207,4 +191,3 @@ a:visited {
         font-size: 20px;
     }
 }
-
