@@ -148,12 +148,12 @@ a:visited {
 }
 
 .header-container h1{
-    font-size:3.0rem; 
+    font-size:3rem; 
+    display: inline-block;
 }
 
 .social-icons {
-    margin-top:20% ;
-    position: fixed;
+    margin-top:25% ;
 }
 .social-icons a {
     display:flex;
@@ -179,3 +179,32 @@ a:visited {
     display: flex;
     flex-direction: row;
 }
+
+@media (max-width: 768px) {
+    .big-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh; 
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        order: 2;
+        margin-bottom: 25px;
+        margin-top: auto; 
+    }
+
+    .container {
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
