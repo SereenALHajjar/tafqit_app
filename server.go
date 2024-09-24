@@ -65,7 +65,7 @@ func main() {
 		http.Redirect(w, r, "/static/", http.StatusMovedPermanently)
 	})
 
-	// fmt.Println("Server is running on http://localhost:8099")
+	// fmt.Println("Server is running on http://localhost:8009")
 	address := os.Getenv("SERVER_ADDR")
 	if address == "" {
 		address = ":8009"

@@ -37,12 +37,12 @@ To run the application locally:
 4. Run the app:
 
     ```bash
-    go run main.go
+    go run server.go
     ```
 
 ## Usage
 
-- Open your browser and navigate to `http://localhost:8080`.
+- Open your browser and navigate to `http://localhost:8009`.
 - Input a number, and the app will convert it into Arabic text.
 
 ## Screenshots
