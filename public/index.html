@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tafqit - تحويل الأعداد المكتوبة رقماً إلى أعداد مكتوبة نصاً بسهولة ودقة.">
+    <meta property="og:title" content="Tafqit Number Conversion">
+    <meta property="og:description" content="Easily convert numbers to text in Arabic.">
+    <!-- TODO: add the website logo to display when sharing links on social media -->
+    <!-- <meta property="og:image" content="image-link.jpg"> -->
+    <meta property="og:url" content="https://tafqitapp-production.up.railway.app">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Tafqit Number Conversion</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,30 +27,28 @@
     <!-- Header Section -->
     <div class="header-container">
         <h1><a href="index.html">  تفقيط</a></h1>
- 
-                <!-- <h4><a href="about.html">About Me</a></h4> -->
     </div>
 
     <div class="big-container">
 
         <div class="social-icons">
-            <a href="https://github.com/SereenALHajjar">
+            <a href="https://github.com/SereenALHajjar" aria-label="GitHub Profile">
                 <i class="fa-brands fa-square-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/sereen-ِalhajjar-5526bb214" target="_blank">
+            <a href="https://www.linkedin.com/in/sereen-ِalhajjar-5526bb214" target="_blank" aria-label="LinkedIn Profile">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="mailto:alhajjar.sereen@gmail.com" target="_blank">
+            <a href="mailto:alhajjar.sereen@gmail.com" target="_blank" aria-label="Send an email">
                 <i class="fa-solid fa-envelope"></i>
             </a>
         </div>
-        <div class="container">
-            <h1>تحويل الأعداد المكتوبة رقماً إلى أعداد مكتوبة نصاً </h1>
-    
+        <div class="container" role="form">
+            <h1>تحويل الأعداد المكتوبة رقماً إلى أعداد مكتوبة نصاً</h1>
+
             <div class="form-group">
-                <input type="number" id="numberInput" placeholder="أدخل العدد" required>
+                <input type="number" id="numberInput" placeholder="أدخل العدد" required aria-required="true">
             </div>
-    
+
             <div class="options">
                 <div class="option-group">
                     <label for="feminine">المعدود مؤنث</label>
@@ -75,9 +80,9 @@
                 <button onclick="sendRequest()">تحويل</button>
             </div>
             
-    
+
             <div class="output">
-                <p id="resultOutput">ستظهر النتيجة هنا</p>
+                <p id="resultOutput" aria-live="polite">ستظهر النتيجة هنا</p>
                 <button onclick="copyToClipboard()">نسخ الى الحافظة</button>
             </div>
             

@@ -60,6 +60,10 @@ func main() {
 	// Serve static files from ./public directory
 	fs := http.FileServer(http.Dir("./public"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
+
+	// Serve the robots.txt file from the public directory to guide search engine crawlers
+	http.Handle("/robots.txt", http.FileServer(http.Dir("./public")))
+
 	// Redirect root to /static/
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/static/", http.StatusMovedPermanently)
