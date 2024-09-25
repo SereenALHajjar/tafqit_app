@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /private/
+Disallow: /temp/
+Disallow: /admin/
+# Allow all user-agents to crawl everything else
+Allow: /
+
+Sitemap: https://tafqitapp-production.up.railway.app
